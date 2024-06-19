@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+//variables
+$color-1: #ffc759;
+$color-2: #ff7b9c;
+$color-3: #607196;
+$color-4: #babfd1;
+$color-5: #e8e9ed;
+$ivory: #fffff0;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: $ivory;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  // background-color: rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background-color: black;
+  color: wheat;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.nav-links {
+  position: sticky;
+  top: 0;
+  background-color: white;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+  border-radius: 25px;
+  display: flex;
+
+  a {
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: $color-2;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    padding: 5px 10px;
+    font-family: "Releway", sans-serif;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+
+    &:nth-child(1) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      border-radius: 0;
+    }
+
+    &:nth-child(4) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &:hover {
+      background-color: $color-1;
+      border-radius: 25px;
+    }
+  }
+}
