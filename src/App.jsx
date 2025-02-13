@@ -1,17 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.scss'
-import Header from './Components/Header/Header'
+import React, { useState } from 'react';
+import Sender from './Components/sender';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-    <Header />
-    </>
-  )
-}
+    <div>
+      <Sender />
+    </div>
+  );
+};
 
-export default App
+export default App;
